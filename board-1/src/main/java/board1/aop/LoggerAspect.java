@@ -2,9 +2,13 @@ package board1.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.mybatis.logging.LoggerFactory;
 import org.slf4j.Logger;
+import org.springframework.stereotype.Component;
 
+@Component
+@Aspect
 public class LoggerAspect {
 	
 	private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
